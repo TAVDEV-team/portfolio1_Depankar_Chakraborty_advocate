@@ -7,9 +7,13 @@ export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', message: '',subject:'' });
   const [status, setStatus] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const handleChange = (
+  e: React.ChangeEvent<
+    HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+  >
+) => {
+  setForm({ ...form, [e.target.name]: e.target.value });
+};
 
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
