@@ -1,7 +1,46 @@
+'use client';
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import { useState } from 'react';
 
 export default function ContactPage() {
+  const [form, setForm] = useState({ name: '', email: '', message: '',subject:'' });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  
+  // Check form data in console first
+  console.log('Submitting form:', form);
+
+  setStatus('Sending...');
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
+    const data = await res.json();
+    console.log('Response from API:', data);
+
+    if (res.ok) {
+      setStatus('Message sent successfully!');
+      setForm({ name: '', email: '',subject:'', message: '' });
+    } else {
+      setStatus(`Error: ${data.error}`);
+    }
+  } catch (err) {
+    console.log('Fetch error:', err);
+    setStatus('Something went wrong.');
+  }
+};
+
+
   return (
     <main>
 
@@ -152,7 +191,7 @@ export default function ContactPage() {
           </div>
 
 
-          <form className="p-6 space-y-6">
+          <form className="p-6 space-y-6" onSubmit={handleSubmit}>
 
             <div className="grid md:grid-cols-2 gap-6">
 
@@ -162,9 +201,12 @@ export default function ContactPage() {
                 </label>
 
                 <input
-                  className="w-full border rounded-md p-3 text-gray-500"
-                  placeholder="Your name"
-                />
+                    className="w-full border rounded-md p-3 text-gray-500"
+                    placeholder="Your name"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                  />
               </div>
 
 
@@ -173,10 +215,13 @@ export default function ContactPage() {
                   Email
                 </label>
 
-                <input
-                  className="w-full border rounded-md p-3 text-gray-500"
-                  placeholder="017xxxxxxxx"
-                />
+              <input
+                className="w-full border rounded-md p-3 text-gray-500"
+                placeholder="name@mail.com"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+              />
               </div>
 
             </div>
@@ -184,19 +229,22 @@ export default function ContactPage() {
 
             <div>
 
-              <label className="block text-sm font-semibold mb-1 text-gray-600">
-                Legal Matter Type
-              </label>
+      <label className="block text-sm font-semibold mb-1 text-gray-600">
+        Legal Matter Type
+      </label>
 
-              <select className="w-full border rounded-md p-3 text-gray-500">
-
-                <option>Select Case Type</option>
-                <option>Civil</option>
-                <option>Criminal</option>
-                <option>Income Tax</option>
-                <option>Company Matters</option>
-
-              </select>
+      <select
+        name="subject"
+        value={form.subject}
+        onChange={handleChange}
+        className="w-full border rounded-md p-3 text-gray-500"
+      >
+        <option value="">Select Case Type</option>
+        <option value="Civil">Civil</option>
+        <option value="Criminal">Criminal</option>
+        <option value="Income Tax">Income Tax</option>
+        <option value="Company Matters">Company Matters</option>
+      </select>
 
             </div>
 
@@ -208,20 +256,24 @@ export default function ContactPage() {
               </label>
 
               <textarea
-                rows={5}
-                className="w-full border rounded-md p-3 text-gray-500"
-                placeholder="Briefly describe your case..."
-              />
+              rows={5}
+              className="w-full border rounded-md p-3 text-gray-500"
+              placeholder="Briefly describe your case..."
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              required
+            />
 
             </div>
 
 
-            <button className="bg-blue-900 text-white px-10 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
+            <button type="submit" className="bg-blue-900 text-white px-10 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
               Submit Request
             </button>
 
           </form>
-
+        {status && <p className="mt-4">{status}</p>}
         </div>
 
       </section>
