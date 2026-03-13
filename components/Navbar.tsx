@@ -60,17 +60,17 @@ export default function Navbar() {
 
       {/* Sidebar for mobile */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform transition-transform duration-300 z-50 ${
+        className={`fixed top-0 right-0 h-full w-64 bg-gray-800 shadow-xl transform transition-transform duration-300 z-50 ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex items-center justify-between p-5 border-b">
-          <span className="text-xl font-bold text-blue-900">Menu</span>
+          <span className="text-xl font-bold text-white">Menu</span>
           <button
             onClick={() => setSidebarOpen(false)}
             className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
           >
-            <HiX className="w-8 h-8 text-black" />
+            <HiX className="w-8 h-8 text-white" />
           </button>
         </div>
 
@@ -79,7 +79,7 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-black text-lg font-medium hover:text-primary transition-colors duration-200"
+              className="text-white text-lg font-medium hover:text-primary transition-colors duration-200"
               onClick={() => setSidebarOpen(false)}
             >
               {item.name}
