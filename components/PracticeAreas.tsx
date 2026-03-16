@@ -1,3 +1,6 @@
+
+"use client";
+import Link from "next/link";
 import { FaBalanceScale, FaGavel, FaFileInvoiceDollar, FaBuilding } from "react-icons/fa";
 
 export default function PracticeAreas() {
@@ -18,9 +21,11 @@ export default function PracticeAreas() {
             <p className="text-gray-600">
               Property disputes, contracts, and civil litigation.
             </p>
+            <Link href="/Practice_Areas">
             <p className="text-blue-700 font-semibold cursor-pointer hover:underline">
               Learn More...
             </p>
+          </Link>
           </div>
 
           {/* Criminal Law */}
@@ -30,9 +35,11 @@ export default function PracticeAreas() {
             <p className="text-gray-600">
               Strong defense for criminal cases.
             </p>
+            <Link href="/Practice_Areas">
             <p className="text-blue-700 font-semibold cursor-pointer hover:underline">
               Learn More...
             </p>
+            </Link>
           </div>
 
           {/* Income Tax */}
@@ -42,9 +49,11 @@ export default function PracticeAreas() {
             <p className="text-gray-600">
               Tax planning, compliance, and dispute resolution.
             </p>
+            <Link href="/Practice_Areas">
             <p className="text-blue-700 font-semibold cursor-pointer hover:underline">
               Learn More...
             </p>
+            </Link>
           </div>
 
           {/* Company Matters */}
@@ -54,9 +63,11 @@ export default function PracticeAreas() {
             <p className="text-gray-600">
               Corporate registration, compliance, and advisory.
             </p>
+            <Link href="/Practice_Areas">
             <p className="text-blue-700 font-semibold cursor-pointer hover:underline">
               Learn More...
             </p>
+            </Link>
           </div>
 
         </div>

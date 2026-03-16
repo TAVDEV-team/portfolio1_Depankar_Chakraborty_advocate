@@ -25,7 +25,7 @@ export default function Navbar() {
             <span className="text-primary text-3xl">⚖️</span>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-blue-900">
-                Advocate Chakroborty
+                Advocate Chakraborty
               </span>
               <span className="text-[10px] uppercase tracking-widest text-slate-500">
                 Judge Court of Bangladesh

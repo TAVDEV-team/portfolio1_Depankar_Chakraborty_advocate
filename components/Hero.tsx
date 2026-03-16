@@ -1,3 +1,6 @@
+
+"use client";
+import Link from "next/link";
 import Image from "next/image"
 
 export default function Hero() {
@@ -37,10 +40,11 @@ export default function Hero() {
           </p>
 
             <div className="flex gap-4">
-
+            <Link href="/Contact">
             <button className="bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-950 transition">
               Request Consultation -
             </button>
+            </Link>
 
             <button className="bg-white text-blue-900 border border-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition">
               View Success Stories

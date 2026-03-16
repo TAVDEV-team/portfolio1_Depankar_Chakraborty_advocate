@@ -1,3 +1,6 @@
+
+"use client";
+import Link from "next/link";
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 
@@ -174,12 +177,12 @@ export default function PracticeAreas() {
               Call Now
             </a>
 
-            <a
-              href="/contact"
+            <Link
+              href="/Contact"
               className="px-8 py-3 bg-amber-500 text-slate-900 font-bold rounded-sm hover:bg-amber-400 transition uppercase tracking-wider text-sm"
             >
               Book Appointment
-            </a>
+            </Link>
 
           </div>
 

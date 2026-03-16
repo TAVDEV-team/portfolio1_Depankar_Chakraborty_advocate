@@ -25,14 +25,14 @@ export default function About() {
           <div className="md:w-2/3 space-y-6">
 
             <h2 className="text-3xl font-bold text-black">
-              Meet Adv. Rajib Chakroborty
+              Meet Adv. Depankar Chakraborty
             </h2>
             <h4 className="text-blue-800 font-bold">
               SENIOR ADVOCATE, JUDGE COURT
             </h4>
 
             <p className="text-gray-600 mt-4">
-            With 10 years of dedicated practice in the Bangladesh legal system, 
+            With 6 years of dedicated practice in the Bangladesh legal system, 
             Advocate Depankar Chakraborty has established a reputation for integrity 
             and an uncompromising pursuit of justice. Specializing in Constitutional 
             and corporate law, he has successfully represented both high-profile 

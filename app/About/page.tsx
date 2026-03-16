@@ -1,3 +1,6 @@
+
+"use client";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image"
@@ -13,7 +16,7 @@ export default function About() {
           <div className="lg:flex lg:items-center lg:space-x-12">
             <div className="lg:w-1/2 text-center lg:text-left">
               <span className="inline-block text-legal-gold font-semibold tracking-widest uppercase text-sm mb-4 text-yellow-500">
-                Establishing Justice Since 1998
+                Establishing Justice Since 2020
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
                 Advocating for Your Rights with Integrity
@@ -57,30 +60,42 @@ export default function About() {
               </div>
 
               {/* Education & Admissions */}
-              <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-serif text-legal-navy mb-4 text-blue-950 font-bold">Education</h3>
-                  <ul className="space-y-3 text-sm text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-legal-gold mr-2 ">•</span> Juris Doctor, Yale Law School
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-legal-gold mr-2">•</span> B.A. Political Science, Georgetown University
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-serif text-legal-navy mb-4 text-blue-950 font-bold">Admissions</h3>
-                  <ul className="space-y-3 text-sm text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-legal-gold mr-2">•</span> State Bar Association
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-legal-gold mr-2">•</span> U.S. District Court, Southern District
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8">
+            
+            {/* Education */}
+            <div>
+              <h3 className="text-xl font-serif text-blue-950 font-bold mb-4">
+                Education
+              </h3>
+
+              <ul className="space-y-3 text-sm text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-legal-gold mr-2">•</span>
+                  LL.B (Honours), Ahsanullah University
+                </li>
+
+                <li className="flex items-start">
+                  <span className="text-legal-gold mr-2">•</span>
+                  LL.M, Jagannath University
+                </li>
+              </ul>
+            </div>
+
+            {/* Admissions */}
+            <div>
+              <h3 className="text-xl font-serif text-blue-950 font-bold mb-4">
+                Admissions
+              </h3>
+
+              <ul className="space-y-3 text-sm text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-legal-gold mr-2">•</span>
+                  Advocate, Judge Court
+                </li>
+              </ul>
+            </div>
+
+          </div>
             </div>
 
             {/* Expertise Sidebar */}
@@ -151,18 +166,18 @@ export default function About() {
             Confidential consultations available. Let us help you navigate your legal challenges with precision and care.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <a
+            <Link href="/Contact"
               className="bg-legal-navy bg-blue-950 text-white px-8 py-4 font-semibold uppercase tracking-widest text-sm hover:bg-legal-gold transition duration-300"
-              href="tel:#"
+             
             >
               Schedule a Consultation
-            </a>
-            <a
+            </Link>
+            {/* <a
               className="bg-transparent text-blue-950 border border-legal-navy border-gray-700 text-legal-navy px-8 py-4 font-semibold uppercase tracking-widest text-sm hover:bg-gray-50 transition duration-300"
               href="#"
             >
               Contact Form
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
