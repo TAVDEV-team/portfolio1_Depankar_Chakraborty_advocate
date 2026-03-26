@@ -23,7 +23,7 @@ export default function PracticeAreas() {
             </p>
             <Link href="/Practice_Areas">
             <p className="text-blue-700 font-semibold cursor-pointer hover:underline">
-              Learn More...
+              Learn More →
             </p>
           </Link>
           </div>
@@ -37,7 +37,7 @@ export default function PracticeAreas() {
             </p>
             <Link href="/Practice_Areas">
             <p className="text-blue-700 font-semibold cursor-pointer hover:underline">
-              Learn More...
+              Learn More →
             </p>
             </Link>
           </div>
@@ -51,7 +51,7 @@ export default function PracticeAreas() {
             </p>
             <Link href="/Practice_Areas">
             <p className="text-blue-700 font-semibold cursor-pointer hover:underline">
-              Learn More...
+              Learn More →
             </p>
             </Link>
           </div>
@@ -65,7 +65,7 @@ export default function PracticeAreas() {
             </p>
             <Link href="/Practice_Areas">
             <p className="text-blue-700 font-semibold cursor-pointer hover:underline">
-              Learn More...
+              Learn More →
             </p>
             </Link>
           </div>

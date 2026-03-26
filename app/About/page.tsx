@@ -103,10 +103,10 @@ export default function About() {
               <h3 className="text-2xl font-serif text-legal-navy mb-6 text-blue-950 font-bold">Expertise</h3>
               <ul className="space-y-4 text-black">
                 {[
-                  "Corporate Litigation",
-                  "Intellectual Property",
-                  "Civil Rights Advocacy",
-                  "Family Law & Mediation",
+                  "CIVIL LAW",
+                  "CRIMINAL DEFENSE",
+                  "INCOME TAX",
+                  "COMPANY MATTERS",
                 ].map((item) => (
                   <li key={item} className="flex items-center justify-between py-3 border-b border-gray-200">
                     <span className="font-semibold">{item}</span>
@@ -172,12 +172,12 @@ export default function About() {
             >
               Schedule a Consultation
             </Link>
-            {/* <a
+            <a
               className="bg-transparent text-blue-950 border border-legal-navy border-gray-700 text-legal-navy px-8 py-4 font-semibold uppercase tracking-widest text-sm hover:bg-gray-50 transition duration-300"
-              href="#"
+              href="tel:01715353165"
             >
-              Contact Form
-            </a> */}
+              Contact 
+            </a>
           </div>
         </div>
       </section>

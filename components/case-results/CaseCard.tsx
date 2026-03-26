@@ -29,12 +29,12 @@ const CaseCard: React.FC<CaseCardProps> = ({ caseItem }) => {
         {caseItem.result}
       </p>
 
-      <Link
+      {/* <Link
         href={`/case-results/${caseItem.slug}`}
         className="inline-block mt-6 text-primary font-semibold hover:underline text-blue-800"
       >
         View Details →
-      </Link>
+      </Link> */}
     </motion.div>
   );
 };
