@@ -11,7 +11,7 @@ export default function Navbar() {
     { name: "About", href: "/About" },
     { name: "Practice Areas", href: "/Practice_Areas" },
     { name: "Blog", href: "/Blog" },
-    { name: "FAQ", href: "/FAQ" },
+    { name: "Case-Results", href: "/case-results" },
     { name: "Contact", href: "/Contact" },
   ];
 

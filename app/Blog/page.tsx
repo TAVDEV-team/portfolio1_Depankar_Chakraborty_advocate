@@ -202,7 +202,7 @@ export default function BlogPage() {
   </h3>
   <ul className="space-y-6">
     <li>
-      <a className="block group" href="#">
+      <a className="block group" href="https://www.sciencedirect.com/science/article/abs/pii/S1544612316302392">
         <span className="text-xs text-legal-gold font-bold">1. Corporate Law</span>
         <p className="text-sm font-serif font-bold group-hover:underline mt-1">
           Shareholder Rights in Mergers &amp; Acquisitions
@@ -210,7 +210,7 @@ export default function BlogPage() {
       </a>
     </li>
     <li>
-      <a className="block group" href="#">
+      <a className="block group" href="https://www.hrfabrika.com/posts/en/non-compete-clauses-in-employment-law-requirements-and-enforcement">
         <span className="text-xs text-legal-gold font-bold">2. Employment Law</span>
         <p className="text-sm font-serif font-bold group-hover:underline mt-1">
           Non-Compete Clauses: What You Need to Know
