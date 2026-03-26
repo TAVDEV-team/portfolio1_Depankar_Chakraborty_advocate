@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const CaseCTA = (): JSX.Element => {
+const CaseCTA = () => {
   return (
     <section className="py-24 bg-primary text-black">
       <div className="max-w-4xl mx-auto px-8 text-center">
